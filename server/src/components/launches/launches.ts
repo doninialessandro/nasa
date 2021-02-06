@@ -14,7 +14,7 @@ interface Launch {
 
 const launches = new Map<number, Launch>();
 
-async function downloadLaunchData() {
+const downloadLaunchData = async () => {
   log.info("📡 Data: Downloading launch data...");
   const response = await fetch("https://api.spacexdata.com/v3/launches", {
     method: "GET",
@@ -44,32 +44,32 @@ async function downloadLaunchData() {
 
     launches.set(flightData.flightNumber, flightData);
   }
-}
+};
 
 await downloadLaunchData();
 log.info(`📡 Data: Downloaded data for ${launches.size} SpaceX launches.`);
 
-export function getAll() {
+export const getAll = () => {
   return Array.from(launches.values());
-}
+};
 
-export function getOne(id: number) {
+export const getOne = (id: number) => {
   if (launches.has(id)) {
     return launches.get(id);
   }
   return null;
-}
+};
 
-export function removeOne(id: number) {
+export const removeOne = (id: number) => {
   const aborted = launches.get(id);
   if (aborted) {
     aborted.upcoming = false;
     aborted.success = false;
   }
   return aborted;
-}
+};
 
-export function addOne(data: Launch) {
+export const addOne = (data: Launch) => {
   launches.set(
     data.flightNumber,
     Object.assign(data, {
@@ -77,4 +77,4 @@ export function addOne(data: Launch) {
       customers: ["NASA"],
     }),
   );
-}
+};

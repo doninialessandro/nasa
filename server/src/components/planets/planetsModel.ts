@@ -46,7 +46,7 @@ const loadPlanetData = async () => {
 
 export async function getAll() {
   planets = await loadPlanetData();
-  log.info(`${planets.length} habitable planets found!`);
+  log.info(`🪐 Planets: ${planets.length} habitable planets found!`);
 
   return planets;
 }

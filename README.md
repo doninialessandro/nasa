@@ -19,7 +19,7 @@ denon start
 Open [http://localhost:8000/index.html](http://localhost:8000/index.html) with your browser to see the
 result.
 
-## Docker Compose
+## Run with Docker
 
 1. Ensure you have the latest version of Docker installed
 2. Run `docker build -t nasa-mission-control .`

@@ -7,11 +7,8 @@ const config: DenonConfig = {
       cmd: "src/mod.ts",
       desc: "Run my mod.ts file",
       allow: ["env", "net", "read", "write"],
+      lock: "lock.json",
       env: env(),
-    },
-    test: {
-      cmd: "deno test",
-      desc: "Run my test",
     },
   },
 };

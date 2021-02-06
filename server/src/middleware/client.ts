@@ -4,9 +4,10 @@ const client = (app: Application) => {
   app.use(async (ctx) => {
     const filePath = ctx.request.url.pathname;
     const fileWithList = [
-      "/images/favicon.png",
-      "/javascripts/script.js",
       "/index.html",
+      "/assets/images/favicon.png",
+      "/assets/videos/space.mp4",
+      "/javascripts/script.js",
       "/stylesheets/style.css",
     ];
     if (fileWithList.includes(filePath)) {

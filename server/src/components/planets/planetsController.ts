@@ -1,5 +1,5 @@
 import { RouterContext } from "../../../deps.ts";
-import * as planets from "./planetsModel.ts";
+import * as planets from "./planets.ts";
 
 const planetsController = () => {
   const getPlanets = async (ctx: RouterContext) => {

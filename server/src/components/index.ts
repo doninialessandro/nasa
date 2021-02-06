@@ -1,4 +1,5 @@
-import welcomeAPI from "./welcome/welcomeAPI.ts";
+import launchesAPI from "./launches/launchesAPI.ts";
 import planetsAPI from "./planets/planetsAPI.ts";
+import welcomeAPI from "./welcome/welcomeAPI.ts";
 
-export { planetsAPI, welcomeAPI };
+export { launchesAPI, planetsAPI, welcomeAPI };

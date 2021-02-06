@@ -1,15 +1,18 @@
-import { Application } from "../../deps.ts";
-import { planetsAPI, welcomeAPI } from "../components/index.ts";
+import { Application, Router } from "../../deps.ts";
+import { launchesAPI, planetsAPI, welcomeAPI } from "../components/index.ts";
 
 const routes = (app: Application) => {
-  const getWelcome = welcomeAPI("/welcome").getWelcome();
-  const getPlanets = planetsAPI("/planets").getPlanets();
+  const router = new Router();
 
-  app.use(getWelcome.routes());
-  app.use(getWelcome.allowedMethods());
+  const welcome = welcomeAPI("/welcome", router);
+  const planets = planetsAPI("/planets", router);
+  const launches = launchesAPI("/launches", router);
 
-  app.use(getPlanets.routes());
-  app.use(getPlanets.allowedMethods());
+  app.use(welcome.routes());
+  app.use(planets.routes());
+  app.use(launches.routes());
+
+  app.use(router.allowedMethods());
 };
 
 export default routes;

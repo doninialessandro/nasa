@@ -10,10 +10,6 @@ const config: DenonConfig = {
       lock: "lock.json",
       env: env(),
     },
-    test: {
-      cmd: "deno test",
-      desc: "Run my test",
-    },
   },
 };
 

@@ -3,7 +3,7 @@ import { BufReader, join, log, parse, pick } from "../../../deps.ts";
 type Planet = Record<string, string>;
 let planets: Array<Planet>;
 
-const filterHabitablePlanets = (planets: Array<Planet>) => {
+export const filterHabitablePlanets = (planets: Array<Planet>) => {
   return planets.filter((planet) => {
     const planetaryRadius = Number(planet["koi_prad"]);
     const stellarRadius = Number(planet["koi_srad"]);
@@ -11,7 +11,7 @@ const filterHabitablePlanets = (planets: Array<Planet>) => {
 
     return planet["koi_disposition"] === "CONFIRMED" &&
       planetaryRadius > 0.5 && planetaryRadius < 1.5 &&
-      stellarRadius > 0.98 && stellarRadius < 1.02 &&
+      stellarRadius > 0.99 && stellarRadius < 1.01 &&
       stellarMass > 0.78 && stellarMass < 1.04;
   });
 };

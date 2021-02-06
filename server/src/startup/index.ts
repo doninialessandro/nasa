@@ -1,3 +1,4 @@
 import { serverListener } from "./serverListener.ts";
+import { loggerSetup } from "./logger.ts";
 
-export { serverListener };
+export { loggerSetup, serverListener };

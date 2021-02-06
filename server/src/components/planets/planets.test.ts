@@ -35,8 +35,8 @@ const TOO_LARGE_SOLAR_MASS = {
   koi_smass: "1.04",
 };
 
-Deno.test("filter only habitable planets", () => {
-  const filtered = filterHabitablePlanets([
+Deno.test("Filter only habitable planets", () => {
+  const filteredPlanets = filterHabitablePlanets([
     HABITABLE_PLANET,
     NOT_CONFIRMED,
     TOO_LARGE_PLANETARY_RADIUS,
@@ -44,7 +44,7 @@ Deno.test("filter only habitable planets", () => {
     TOO_LARGE_SOLAR_MASS,
   ]);
 
-  assertEquals(filtered, [
+  assertEquals(filteredPlanets, [
     HABITABLE_PLANET,
   ]);
 });

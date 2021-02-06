@@ -1,10 +1,10 @@
-import { Application } from "../../deps.ts";
+import { Application, log } from "../../deps.ts";
 
 export const responseTime = (app: Application) => {
   app.use(async (ctx, next) => {
     await next();
     const time = ctx.response.headers.get("X-Response-Time");
-    console.log(`${ctx.request.method} ${ctx.request.url}: ${time}`);
+    log.info(`${ctx.request.method} ${ctx.request.url}: ${time}`);
   });
 
   app.use(async (ctx, next) => {

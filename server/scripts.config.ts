@@ -5,9 +5,13 @@ const config: DenonConfig = {
   scripts: {
     start: {
       cmd: "src/mod.ts",
-      desc: "run my app.ts file",
+      desc: "Run my mod.ts file",
       allow: ["env", "net", "read", "write"],
       env: env(),
+    },
+    test: {
+      cmd: "deno test",
+      desc: "Run my test",
     },
   },
 };

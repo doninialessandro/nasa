@@ -19,6 +19,23 @@ denon start
 Open [http://localhost:8000/index.html](http://localhost:8000/index.html) with your browser to see the
 result.
 
+## Docker Compose
+
+1. Ensure you have the latest version of Docker installed
+2. Run `docker build -t nasa-mission-control .`
+3. Run `docker run -it -p 8000:8000 nasa-mission-control`
+
+Open [http://localhost:8000/index.html](http://localhost:8000/index.html) with your browser to see the
+result.
+
+## Backend API
+
+Ensure the backend is running by making a GET request to http://localhost:8000/
+
+## Front End
+
+Browse to the Mission Control front end at http://localhost:8000/index.html and schedule an interstellar mission launch!
+
 ## Learn More
 
 To learn more about Deno, take a look at the following resources:

@@ -4,7 +4,7 @@ import { launchesAPI, planetsAPI, welcomeAPI } from "../components/index.ts";
 const routes = (app: Application) => {
   const router = new Router();
 
-  const welcome = welcomeAPI("/welcome", router);
+  const welcome = welcomeAPI("", router);
   const planets = planetsAPI("/planets", router);
   const launches = launchesAPI("/launches", router);
 

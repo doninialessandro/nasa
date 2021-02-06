@@ -12,4 +12,6 @@ export {
 } from "https://deno.land/x/oak@v6.5.0/mod.ts";
 export type { RouterContext } from "https://deno.land/x/oak@v6.5.0/router.ts";
 
+export { config } from "https://deno.land/x/dotenv@v2.0.0/mod.ts";
+
 export { flatMap, pick } from "https://deno.land/x/lodash@4.17.15-es/lodash.js";

@@ -1,5 +1,5 @@
 import { DenonConfig } from "https://deno.land/x/denon@2.4.7/mod.ts";
-import { config as env } from "https://deno.land/x/dotenv@v2.0.0/mod.ts";
+import { config as env } from "./deps.ts";
 
 const config: DenonConfig = {
   scripts: {

@@ -41,3 +41,6 @@ Browse to the Mission Control front end at http://localhost:8000/index.html and 
 To learn more about Deno, take a look at the following resources:
 
 - [Deno Documentation](https://deno.land/manual) - learn about Deno
+
+### Credits 
+Inspired by [odziem/nasa-deno](https://github.com/odziem/nasa-deno) 

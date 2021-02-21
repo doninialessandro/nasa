@@ -1,7 +1,6 @@
 This is an NASA Mission control panel based on [Deno](https://deno.land)
 
-> :warning: **This is a learning project**, some best practices are out of scope
-> and the payment function works in test mode.
+> :warning: **This is a learning project**, some best practices are out of scope.
 
 ## Installation
 
